@@ -1,6 +1,6 @@
 # Backend (.NET) Assessment
 
-## Merhaba
+## Merhaba 
 
 Bu değerlendirme işe başvuru sürecindeki adaylar için hazırlanmış olup, katılacak kimselerin yaklaşım ve yetkinliklerini değerlendirmede bizlere yardımcı olmak için tasarlanmıştır.
 
