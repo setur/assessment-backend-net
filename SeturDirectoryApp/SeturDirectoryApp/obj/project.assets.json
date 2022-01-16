@@ -198,11 +198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hilalyildirim\\source\\repos\\SeturDirectoryApp\\SeturDirectoryApp\\SeturDirectoryApp.csproj",
+      "projectUniqueName": "C:\\Users\\hilalyildirim\\Documents\\GitHub\\assessment-backend-net\\SeturDirectoryApp\\SeturDirectoryApp\\SeturDirectoryApp.csproj",
       "projectName": "SeturDirectoryApp",
-      "projectPath": "C:\\Users\\hilalyildirim\\source\\repos\\SeturDirectoryApp\\SeturDirectoryApp\\SeturDirectoryApp.csproj",
+      "projectPath": "C:\\Users\\hilalyildirim\\Documents\\GitHub\\assessment-backend-net\\SeturDirectoryApp\\SeturDirectoryApp\\SeturDirectoryApp.csproj",
       "packagesPath": "C:\\Users\\hilalyildirim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hilalyildirim\\source\\repos\\SeturDirectoryApp\\SeturDirectoryApp\\obj\\",
+      "outputPath": "C:\\Users\\hilalyildirim\\Documents\\GitHub\\assessment-backend-net\\SeturDirectoryApp\\SeturDirectoryApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hilalyildirim\\AppData\\Roaming\\NuGet\\NuGet.Config",
