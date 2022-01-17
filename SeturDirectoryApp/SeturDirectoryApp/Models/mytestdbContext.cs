@@ -44,7 +44,7 @@ namespace SeturDirectoryApp.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasKey(e => e.Uuid);
+                entity.HasKey(x => x.Uuid);
 
                 entity.Property(e => e.Uuid).HasColumnName("UUID");
 
