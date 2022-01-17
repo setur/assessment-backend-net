@@ -50,6 +50,12 @@ namespace SeturDirectoryApp.Controllers
 
             return user;
         }
+        [HttpGet(nameof(GetUserDetails))]
+        public async Task<User> GetUserDetails(int id)
+        {
+            var result = await _userService.GetUserDetails(id);
+            return result;
+        }
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
