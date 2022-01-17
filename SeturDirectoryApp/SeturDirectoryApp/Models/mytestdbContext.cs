@@ -33,7 +33,7 @@ namespace SeturDirectoryApp.Models
         {
             modelBuilder.Entity<CantactInformation>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(x => x.CantactInformationId);
 
                 entity.ToTable("CantactInformation");
 
