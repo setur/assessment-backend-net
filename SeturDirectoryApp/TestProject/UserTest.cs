@@ -18,21 +18,21 @@ namespace TestProject
             Assert.Equal("JK", result);
         }
 
-        [Fact]
-        public async void GetUser()
-        {
-            var userDTO = new User()
-            {
-                Uuid = 1,
-                Name = "JK",
-                LastName = "SDE",
-                CantactInformationId = 2,
-                Company = "AA"
-            };
-            mock.Setup(p => p.GetUser(1)).ReturnsAsync(userDTO);
-            UsersController emp = new UsersController(mock.Object);
-            var result = await emp.GetUser(1);
-            Assert.True(userDTO.Equals(result));
-        }
+        //[Fact]
+        //public async void GetUser()
+        //{
+        //    var userDTO = new User()
+        //    {
+        //        Uuid = 1,
+        //        Name = "JK",
+        //        LastName = "SDE",
+        //        CantactInformationId = 2,
+        //        Company = "AA"
+        //    };
+        //    mock.Setup(p => p.GetUser(1)).ReturnsAsync(userDTO);
+        //    UsersController emp = new UsersController(mock.Object);
+        //    var result = await emp.GetUser(1);
+        //    Assert.True(userDTO.Equals(result));
+        //}
     }
 }

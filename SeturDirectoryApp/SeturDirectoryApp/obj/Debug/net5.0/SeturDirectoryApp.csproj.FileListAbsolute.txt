@@ -135,3 +135,9 @@ C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp
 C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\Moq.dll
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\xunit.abstractions.dll
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\xunit.assert.dll
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\xunit.core.dll
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\SeturDirectoryApp\bin\Debug\net5.0\xunit.execution.dotnet.dll

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SeturDirectoryApp.Services.Users
 {
-    interface IUserService
+   public interface IUserService
     {
         Task<string> GetUserById(int id);
     }
