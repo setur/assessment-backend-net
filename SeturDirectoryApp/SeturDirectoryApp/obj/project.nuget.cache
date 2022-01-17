@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "qoZcN3sy52/vDIygjFP6qyjoDRJdwhdK+uYvY6gbW1sdqtcFgedOftJCbvPOHD23pVAtKjC5Bj8DwRPK37SN4Q==",
+=======
+  "dgSpecHash": "ccOhMYs55znYTbZMmakPNh71F7C87vbq+lUO9HMlYkVOVCah2llcBHC4TaoMs2SrY9EPRXaZTqw1n3dSp/LUfQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\hilalyildirim\\Documents\\GitHub\\assessment-backend-net\\SeturDirectoryApp\\SeturDirectoryApp\\SeturDirectoryApp.csproj",
   "expectedPackageFiles": [
