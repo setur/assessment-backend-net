@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SeturDirectoryApp.Models;
+using SeturDirectoryApp.Services.Users;
 
 namespace SeturDirectoryApp.Controllers
 {
@@ -15,9 +16,11 @@ namespace SeturDirectoryApp.Controllers
     {
         private readonly mytestdbContext _context;
 
-        public UsersController(mytestdbContext context)
+        private readonly IUserService _userService;
+
+        public UsersController(IUserService userService)
         {
-            _context = context;
+            _userService = userService;
         }
 
         // GET: api/Users
@@ -25,6 +28,13 @@ namespace SeturDirectoryApp.Controllers
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             return await _context.Users.ToListAsync();
+        }
+
+        [HttpGet(nameof(GetUserById))]
+        public async Task<string> GetUserById(int id)
+        {
+            var result = await _userService.GetUserById(id);
+            return result;
         }
 
         // GET: api/Users/5

@@ -1,0 +1,6 @@
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\obj\Debug\net5.0\TestProject.csproj.AssemblyReference.cache
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\obj\Debug\net5.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\obj\Debug\net5.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\obj\Debug\net5.0\TestProject.AssemblyInfo.cs
+C:\Users\hilalyildirim\Documents\GitHub\assessment-backend-net\SeturDirectoryApp\TestProject\obj\Debug\net5.0\TestProject.csproj.CoreCompileInputs.cache
