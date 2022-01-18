@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SeturDirectoryApp.Models;
+using SeturDirectoryApp.Services.ContactInformation;
 
 namespace SeturDirectoryApp.Controllers
 {
@@ -15,9 +16,15 @@ namespace SeturDirectoryApp.Controllers
     {
         private readonly mytestdbContext _context;
 
-        public CantactInformationsController(mytestdbContext context)
+        private readonly IContactInformationService _contactInformationService;
+
+        //public CantactInformationsController(mytestdbContext context)
+        //{
+        //    _context = context;
+        //}
+        public CantactInformationsController(IContactInformationService contactInformationService)
         {
-            _context = context;
+            _contactInformationService = contactInformationService;
         }
 
         // GET: api/CantactInformations

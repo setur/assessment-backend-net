@@ -23,11 +23,11 @@ namespace TestProject
         {
             var userDTO = new User()
             {
-                Uuid = 1,
-                Name = "JK",
-                LastName = "SDE",
-                CantactInformationId = 2,
-                Company = "AA"
+                Uuid = 3,
+                Name = "Hilal",
+                LastName = "yýldýrým",
+                CantactInformationId = 1,
+                Company = "türk telekom"
             };
             mock.Setup(p => p.GetUser(1)).ReturnsAsync(userDTO);
             UsersController emp = new UsersController(mock.Object);
