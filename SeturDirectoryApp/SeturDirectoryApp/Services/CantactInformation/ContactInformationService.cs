@@ -48,5 +48,7 @@ namespace SeturDirectoryApp.Services.ContactInformation
 
             return null;
         }
+
+
     }
 }

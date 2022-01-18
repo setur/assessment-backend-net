@@ -18,10 +18,10 @@ namespace SeturDirectoryApp.Controllers
 
         private readonly IContactInformationService _contactInformationService;
 
-        //public CantactInformationsController(mytestdbContext context)
-        //{
-        //    _context = context;
-        //}
+        public CantactInformationsController(mytestdbContext context)
+        {
+            _context = context;
+        }
         public CantactInformationsController(IContactInformationService contactInformationService)
         {
             _contactInformationService = contactInformationService;

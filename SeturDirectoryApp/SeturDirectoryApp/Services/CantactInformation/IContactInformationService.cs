@@ -11,7 +11,9 @@ namespace SeturDirectoryApp.Services.ContactInformation
     {
         Task<ActionResult<IEnumerable<CantactInformation>>> GetCantactInformations();
         Task<ActionResult<CantactInformation>> GetCantactInformation(int id);
+        //Task<ActionResult<CantactInformation>> DeleteCantactInformation(int id);
         Task<IActionResult> DeleteCantactInformation(int id);
+
 
 
     }
