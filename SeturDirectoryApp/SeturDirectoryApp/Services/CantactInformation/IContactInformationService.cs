@@ -14,7 +14,5 @@ namespace SeturDirectoryApp.Services.ContactInformation
         //Task<ActionResult<CantactInformation>> DeleteCantactInformation(int id);
         Task<IActionResult> DeleteCantactInformation(int id);
 
-
-
     }
 }

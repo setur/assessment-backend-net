@@ -47,21 +47,6 @@ namespace TestProject
             mock.Verify(repo => repo.DeleteCantactInformation(It.IsAny<int>()), Times.Once);
 
 
-            //int testId = 2;
-
-            //mock.Setup(repo => repo.DeleteCantactInformation(It.IsAny<int>()))
-            //       .Returns((Task<IActionResult>)Task.CompletedTask).Verifiable();
-
-            //var controller = new CantactInformationsController(mock.Object);
-
-            //// Act
-            //var result = await controller.DeleteCantactInformation(testId);
-
-            //// Assert
-            //var redirectToActionResult = Assert.IsType<RedirectToActionResult>(result);
-            //Assert.Null(redirectToActionResult.ControllerName);
-            //Assert.Equal("Read", redirectToActionResult.ActionName);
-            //mock.Verify();
         }
 
 
