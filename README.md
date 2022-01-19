@@ -6,6 +6,7 @@ uygulama sürecim daha zor olduğundan bazı kısımlarda eksiklikler ve yanlı�
 bildirirseniz yanlışlarımı ve eksiklerimi öğrenenerek kendimi geliştirmem konusunda bana yardımcı olursunuz.
 
 Proje adımlarında ilk önce database'de iki tablo oluşturdum
+
 -dbo.Users : Kişi bilgilerinin tutulduğu tablo
 -dbo.CantactInformation : Kişilere ailt iletişim bilgilerinin tutulduğu tablo
 
