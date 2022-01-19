@@ -77,7 +77,7 @@ Veri yapısı olarak da:
 
 ### Çalışmanın Tamamlanması
 
-Çalışma tamamlandığında bu codebase'i bir git repository'sine aktarmanız, çalışma bitiminde de bu repository adresiyle paylaşmanız beklenecektir.
+Çalışma tamamlandığında bu codebase'i kişisel git repository'sine aktarmanız, çalışma bitiminde de bu repository adresiyle paylaşmanız beklenecektir.
 
 
 ## Sorularınız
