@@ -1,4 +1,6 @@
 using Contact.Data;
+using Contact.Data.Repositories;
+using Contact.Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -29,6 +31,7 @@ namespace Contact.API
         {
             services.AddDbContext<ContactContext>(options =>
             options.UseNpgsql(Configuration.GetConnectionString("ContactDb")));
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
