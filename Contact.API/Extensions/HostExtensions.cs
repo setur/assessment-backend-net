@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Contact.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -15,19 +16,15 @@ namespace Contact.API.Extensions
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var logger = services.GetRequiredService<ILogger<TContext>>();
                 try
                 {
-                    logger.LogInformation("Migrating postresql database.");
-                    using (var context = services.GetRequiredService<ContactAPIContext>())
+                    using (var context = services.GetRequiredService<ContactContext>())
                     {
                         context.Database.Migrate();
                     }
-                    logger.LogInformation("Migrated postresql database.");
                 }
                 catch (NpgsqlException ex)
                 {
-                    logger.LogError(ex, "An error occurred while migrating the postresql database");
 
                     if (retryForAvailability < 50)
                     {

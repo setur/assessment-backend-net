@@ -1,4 +1,4 @@
-﻿namespace Contact.API.Entities
+﻿namespace Contact.Data.Entities
 {
     public class Person
     {

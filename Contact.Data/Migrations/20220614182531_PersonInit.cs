@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Contact.API.Migrations
+namespace Contact.Data.Migrations
 {
-    public partial class PeopleInit : Migration
+    public partial class PersonInit : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
