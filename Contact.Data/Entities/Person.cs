@@ -8,7 +8,7 @@ namespace Contact.Data.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Company { get; set; }
-        public ICollection<Info> Info { get; set; }
+        public virtual ICollection<Info> Info { get; set; }
 
     }
 }

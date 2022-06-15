@@ -10,6 +10,7 @@ namespace Contact.Data.Repositories.Interfaces
     public interface IRepositoryWrapper
     {
         IPersonRepository People { get; }
+        IInfoRepository Infos { get; }
         void Save();
     }
 }
