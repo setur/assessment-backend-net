@@ -1,4 +1,6 @@
-﻿using Contact.Data.Entities;
+﻿using AutoMapper;
+using Contact.API.DTOs;
+using Contact.Data.Entities;
 using Contact.Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +15,12 @@ namespace Contact.API.Controllers
     public class PersonController : ControllerBase
     {
         private IRepositoryWrapper _repository;
+        private IMapper _mapper;
 
-        public PersonController(IRepositoryWrapper repository)
+        public PersonController(IRepositoryWrapper repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -34,11 +38,11 @@ namespace Contact.API.Controllers
         }
 
         [HttpPost]
-        public  ActionResult<Person> AddPerson([FromBody] Person person)
+        public  ActionResult<Person> AddPerson([FromBody] PersonDTO personDto)
         {
             try
             {
-                if (person is null)
+                if (personDto is null)
                 {
                     return BadRequest("Person object is null");
                 }
@@ -46,6 +50,8 @@ namespace Contact.API.Controllers
                 {
                     return BadRequest("Invalid model object");
                 }
+
+                Person person = _mapper.Map<Person>(personDto);
                 _repository.People.AddPerson(person);
                 _repository.Save();
                 return Ok(person);
@@ -56,12 +62,35 @@ namespace Contact.API.Controllers
             }
         }
 
-        [HttpPut]
-        public ActionResult<Person> UpdatePerson([FromBody] Person person)
+        [HttpPut("{id:int}")]
+        public IActionResult UpdatePerson(int id, [FromBody] PersonDTO personDto)
         {
-            _repository.People.UpdatePerson(person);
-            _repository.Save();
-            return Ok(person);
+            try
+            {
+                if (personDto is null)
+                {
+                    return BadRequest("Person object is null");
+                }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest("Invalid model object");
+                }
+
+                Person person = _repository.People.GetPersonByID(id);
+                
+                if (person is null)
+                {
+                    return NotFound();
+                }
+                _mapper.Map(personDto, person);
+                _repository.People.UpdatePerson(person);
+                _repository.Save();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpDelete("{id}")]
