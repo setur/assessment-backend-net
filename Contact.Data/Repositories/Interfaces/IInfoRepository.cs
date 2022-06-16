@@ -9,7 +9,8 @@ namespace Contact.Data.Repositories.Interfaces
 {
     public interface IInfoRepository
     {
-        public IEnumerable<Info> GetAllInfo(int personId);
+        public IEnumerable<Info> GetAllInfo();
+        public IEnumerable<Info> GetAllInfoOfPerson(int personId);
         public Info GetInfoById(int infoId);
         public void CreateInfo(Info info);
         public void UpdateInfo(Info info);

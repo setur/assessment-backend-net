@@ -11,10 +11,12 @@ namespace Contact.Data.Repositories
     public class InfoRepository : RepositoryBase<Info>, IInfoRepository
     {
         public InfoRepository(ContactContext contactContext) : base(contactContext) { }
+        
+        public IEnumerable<Info> GetAllInfo() => FindAll();
 
         public void CreateInfo(Info info) => Create(info);
 
-        public IEnumerable<Info> GetAllInfo(int personId) => FindByCondition(i => i.PersonId == personId).ToList();
+        public IEnumerable<Info> GetAllInfoOfPerson(int personId) => FindByCondition(i => i.PersonId == personId).ToList();
 
         public Info GetInfoById(int infoId) => FindByCondition(i => i.Id == infoId).FirstOrDefault();
 

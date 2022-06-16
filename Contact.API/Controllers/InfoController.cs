@@ -27,7 +27,7 @@ namespace Contact.API.Controllers
         {
             try
             {
-                IEnumerable<Info> infos = _repository.Infos.GetAllInfo(personId);
+                IEnumerable<Info> infos = _repository.Infos.GetAllInfoOfPerson(personId);
                 return Ok(infos);
             }
             catch (Exception)
