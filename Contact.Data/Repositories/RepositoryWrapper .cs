@@ -13,6 +13,7 @@ namespace Contact.Data.Repositories
         private ContactContext _contactContext;
         private IPersonRepository _people;
         private IInfoRepository _infos;
+        private IReportRepository _report;
 
         public RepositoryWrapper(ContactContext contactContext)
         {
@@ -40,6 +41,18 @@ namespace Contact.Data.Repositories
                     _infos = new InfoRepository(_contactContext);
                 }
                 return _infos;
+            }
+        }
+
+        public IReportRepository Reports
+        {
+            get
+            {
+                if (_report == null)
+                {
+                    _report = new ReportRepository(_contactContext);
+                }
+                return _report;
             }
         }
 

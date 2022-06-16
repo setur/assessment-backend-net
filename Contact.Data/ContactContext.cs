@@ -8,5 +8,6 @@ namespace Contact.Data
         public ContactContext(DbContextOptions<ContactContext> options) : base(options){}
         public DbSet<Person> People { get; set;}
         public DbSet<Info> Info { get; set; }
+        public DbSet<Report> Reports { get; set; }
     }
 }

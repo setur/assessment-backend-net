@@ -11,6 +11,7 @@ namespace Contact.Data.Repositories.Interfaces
     {
         IPersonRepository People { get; }
         IInfoRepository Infos { get; }
+        IReportRepository Reports { get; }
         void Save();
     }
 }
