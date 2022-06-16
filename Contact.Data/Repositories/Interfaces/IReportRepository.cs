@@ -12,5 +12,6 @@ namespace Contact.Data.Repositories.Interfaces
         public IEnumerable<Report> GetAllReports();
         public Report GetReportById(int reportId);
         public void CreateReport(Report report);
+        public void UpdateReport(Report report);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Confluent.Kafka;
 using Contact.Data.Entities;
 using Contact.Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -36,18 +37,46 @@ namespace Contact.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateReport()
+        public ActionResult CreateReport(string loc)
         {
             try
             {
-                Report report = new Report() 
-                { 
+                Report report = new Report()
+                {
                     Date = DateTime.Now,
                     Status = ReportStatus.Pending
                 };
                 _repository.Reports.CreateReport(report);
                 _repository.Save();
-                return Ok(report);
+
+                var config = new ProducerConfig
+                {
+                    BootstrapServers = "broker:9092"
+                };
+
+                const string topic = "report";
+
+                using (var producer = new ProducerBuilder<int, string>(
+                    config.AsEnumerable()).Build())
+                {
+
+                    producer.Produce(topic, new Message<int, string> { Key = report.Id, Value = loc },
+                        (deliveryReport) =>
+                        {
+                            if (deliveryReport.Error.Code != ErrorCode.NoError)
+                            {
+                                Console.WriteLine($"Failed to deliver message: {deliveryReport.Error.Reason}");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Produced event to topic {topic}: key = {report.Id,-10} value = {loc}");
+                            }
+                        });
+
+
+                    producer.Flush(TimeSpan.FromSeconds(10));
+                    return Ok(report);
+                }
             }
             catch (Exception ex)
             {

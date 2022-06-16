@@ -15,5 +15,6 @@ namespace Contact.Data.Repositories
         public void CreateReport(Report report) => Create(report);
         public IEnumerable<Report> GetAllReports() => FindAll().ToList();
         public Report GetReportById(int reportId) => FindByCondition(r => r.Id == reportId).FirstOrDefault();
+        public void UpdateReport(Report report) => Update(report);
     }
 }
